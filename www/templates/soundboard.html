@@ -1,0 +1,12 @@
+<ion-view view-title="Soundboard">
+	<ion-content>
+		<div class="row">
+			<div class="col">
+				<button 
+					ng-repeat="sound in soundboardCtrl.sounds"
+					ng-click="soundboardCtrl.play(sound.src)"
+					class="button button-block button-positive">{{sound.name}}</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

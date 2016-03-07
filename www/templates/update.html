@@ -1,0 +1,32 @@
+<ion-view view-title="Update">
+	<ion-content class="padding-top">
+		<div class="row text-center" ng-show="updateCtrl.checkingForUpdate">
+			<div class="col">
+				<ion-spinner></ion-spinner>
+				<p>Checking for updates...</p>
+			</div>
+		</div>
+		<div class="row text-center" ng-show="updateCtrl.installingUpdate">
+			<div class="col">
+				<ion-spinner></ion-spinner>
+				<p>Installing update...</p>
+			</div>
+		</div>
+		<div class="row text-center" ng-hide="updateCtrl.checkingForUpdate || updateCtrl.installingUpdate || !updateCtrl.hasUpdate">
+			<div class="col">
+				<p>Update found!</p>
+				<button class="button button-stable button-block button-pulse" ng-click="updateCtrl.doUpdate()">
+					Install now
+				</button>
+			</div>
+		</div>
+		<div class="row text-center" ng-hide="updateCtrl.checkingForUpdate || updateCtrl.installingUpdate || updateCtrl.hasUpdate">
+			<div class="col">
+				<p>No update found.</p>
+				<button class="button button-stable button-block button-pulse" ng-click="updateCtrl.checkForUpdates()">
+					Check now
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
