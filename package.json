@@ -1,7 +1,7 @@
 {
-  "name": "board-game-soundboard",
+  "name": "Board Game Soundboard",
   "version": "1.1.1",
-  "description": "board-game-soundboard: An Ionic project",
+  "description": "A soundboard for enhancing your board game experience.",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
